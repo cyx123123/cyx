@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的</title>
+    <link rel="stylesheet" href="./css/case.css">
+    <link rel="stylesheet" href="./css/personal.css">
+    <script src="./js/font-auto.js"></script>
+    <script src="./js/zepto.min.js"></script>
+</head>
+<body>
+    <div class="box">
+        <div class="head">
+            <h5 class="head-top">
+                <!-- <i class="head-come" onclick="history.go(-1)"></i> -->
+                <i class="head-news"><i class="head-newred"></i></i>
+                <i class="head-setup"></i>
+            </h5>
+            <div class="head-personal">
+                <div class="head-personal-left">
+                    <img src="./img/logo@2x.png" alt="" class="personal-left-img">
+                </div>
+                <div class="head-personal-right">
+                    <div class="head-personal-icon">
+                        <div class="personal-icongold YBzengsong">优币 11枚</div>
+                        <img src="./img/问号@2x.png" alt="" class="personal-iconimg">
+                    </div>
+                    <h5 class="head-personal-title">凯莱德（北京）信用管理有限公司</h5>
+                    <span class="head-personal-word">个人征信 / IT互联网</span>
+                    <div class="head-personal-infor">
+                        <div class="personal-infor-every">
+                            <img src="./img/人头小图图@2x.png" alt="" class="personal-infor-every-img">
+                            <span>王婧婧</span>
+                        </div>
+                        <div class="personal-infor-every">
+                            <img src="./img/手机@2x.png" alt="" class="personal-infor-every-img">
+                            <span class="HBshouji">13611112456</span>
+                        </div>
+                        <div class="personal-infor-every">
+                            <img src="./img/email@2x.png" alt="" class="personal-infor-every-img">
+                            <span class="GHyouxiang">18301051820@qq.com</span>
+                        </div>                     
+                    </div>
+                </div>                
+            </div>
+        </div>
+
+        <div class="main">   
+            <!-- 邀请码 -->
+            <div class="main-status">
+                <img src="./img/邀请码@2x.png" alt="" class="main-status-img">
+                邀请码：<span class="main-status-word">RRTKH32325BHG</span>
+                <img src="./img/二维码@2x.png" alt="" class="main-status-ma">
+                <i class="main-right-icon"></i>
+            </div>
+
+            <!-- 下面表单 -->
+            <div class="main-form">
+
+                <div class="main-form-top">
+                    <i class="main-form-gray"></i>
+                    <span>企业资质</span>
+                    <i class="main-form-gray"></i>
+                </div>
+                <div class="main-form-image">
+                    <div class="form-image-every">
+                        <img src="./img/营业执照111@2x.png" alt="">
+                        <p class="form-image-word">营业执照</p>
+                    </div>
+                    <div class="form-image-every">
+                        <img src="./img/营业执照111@2x.png" alt="">
+                        <p class="form-image-word">工商执照</p>
+                    </div>
+                    <div class="form-image-every">
+                        <img src="./img/营业执照111@2x.png" alt="">
+                        <p class="form-image-word">三证合一</p>
+                    </div>
+                </div>
+                <!-- 灰块 -->
+                <div class="main-gray-block"></div>
+                <!-- 模块 -->
+                <div class="main-form-modula ZZHguanli">
+                    <h5 class="form-modula-title">子账号管理</h5>
+                    <i class="main-right-icon"></i>
+                </div>
+                <!-- 灰线 -->
+                <div class="main-gray"></div>
+                <div class="main-form-modula ZHanquan">
+                    <h5 class="form-modula-title">账户安全</h5>
+                    <i class="main-right-icon"></i>
+                </div>
+                <!-- 灰线 -->
+                <div class="main-gray"></div>
+                <div class="main-form-modula GLYbiangeng">
+                    <h5 class="form-modula-title">管理员变更</h5>
+                    <i class="main-right-icon"></i>
+                </div>
+
+  
+         
+            </div>
+            <!-- 脚部 -->
+            <div class="footer">
+                <div class="personal-center homepage">
+                    <img src="./img/灰色首页@2x.png" alt="" class="personal-center-img">
+                    <span class="personal-center-word">首页</span>
+                </div>
+                <div class="personal-center entrust">
+                    <img src="./img/委托底部@2x.png" alt="" class="personal-center-img">
+                    <span class="personal-center-word">背调</span>
+                </div>
+                <div class="personal-center check">
+                    <img src="./img/核查底部@2x.png" alt="" class="personal-center-img">
+                    <span class="personal-center-word">协查</span>
+                </div>
+                <div class="personal-center census">
+                    <img src="./img/统计底部@2x.png" alt="" class="personal-center-img">
+                    <span class="personal-center-word">统计</span>
+                </div>
+                <div class="personal-center personal">
+                    <img src="./img/人头蓝色@2x.png" alt="" class="personal-center-img">
+                    <span class="personal-center-word blue">我的</span>
+                </div>
+            </div> 
+        </div>
+    </div>
+</body>
+<script>
+    $(function(){
+        // 底部转换
+        $('.homepage').click(function(){
+            location.href = './homepage.html'
+        })
+        $('.entrust').click(function(){
+            location.href = './entrust.html'
+        })
+        $('.check').click(function(){
+            location.href = './check.html'
+        })
+        $('.census').click(function(){
+            location.href = './census.html'
+        })
+        $('.personal').click(function(){
+            location.href = './personal.html'
+        })
+        // 子账号管理跳转
+        $('.ZZHguanli').click(function(){
+            location.href = './ZZHguanli.html'
+        })
+        $('.ZHanquan').click(function(){
+            location.href = './ZHanquan.html'
+        })
+        $('.GLYbiangeng').click(function(){
+            location.href = './GLYbiangeng.html'
+        })
+        // 上面手机号  邮箱管理
+        $('.HBshouji').click(function(){
+            location.href = './HBshouji.html'
+        })
+        $('.GHyouxiang').click(function(){
+            location.href = './GHyouxiang.html'
+        })
+        // 消息列表
+        $('.head-news').click(function(){
+            location.href = './newslist.html'
+        })
+        // 金豆规则介绍
+        $('.personal-iconimg').click(function(){
+            location.href = './JDguize.html'
+        })     
+        // 优币赠送
+        $('.YBzengsong').click(function(){
+            location.href = './YBzengsong.html'
+        })      
+    })
+</script>
+
+</html>

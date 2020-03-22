@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页原版</title>
+    <link rel="stylesheet" href="./css/case.css">
+    <link rel="stylesheet" href="./css/homepage.css">
+    <link rel="stylesheet" href="./layui/css/layui.css"  media="all">
+    <script src="./js/font-auto.js"></script>
+    <script src="./js/zepto.min.js"></script>
+
+    <script src="./layui/layui.js"></script>
+</head>
+<body>
+    <div class="box">
+        <div class="box-header">
+            <div class="box-header-search"><i class="icon-search"></i>搜索委托人姓名</div>
+            <img src="./img/消息logo@2x.png" alt="" class="box-header-right-img">
+            <span class="box-header-right-word">消息</span>
+            <img src="./img/消息红点首页原版.png" class="box-header-icon-red">
+        </div>
+
+        <div class="box-main">
+            <!-- 轮播 -->
+            <!-- <div class="box-main-blueimg"> -->
+                <div class="layui-carousel box-main-blueimg" id="test1" lay-filter="test1">
+                    <div carousel-item="">
+                    <div><img src="./img/2020012522284230913.jpg" alt=""></div>
+                    <div><img src="./img/t01a3653f21bd2db607.jpg" alt=""></div>
+                    <div><img src="./img/2020012522284230913.jpg" alt=""></div>
+                    <div><img src="./img/t01a3653f21bd2db607.jpg" alt=""></div>
+                    <div><img src="./img/2020012522284230913.jpg" alt=""></div>
+                    </div>
+                </div>
+            <!-- </div> -->
+
+            <div class="mian-every-all">
+                <!-- <div class="main-every">
+                    <div class="main-every-left"><img src="./img/凯莱德logo@2x.png" alt="" class="main-every-left-img"></div>
+                    <div class="main-every-right">
+                        <h4 class="every-right-title">中美史克 - 王婧婧</h4>
+                        <span class="every-right-date">03月21日</span>
+                        <div class="every-right-passage">行业咨询的介绍行业咨询的介绍行业咨询的介行业咨询的介绍行业咨询的介绍行业咨询的介</div>
+                        <i class="every-right-icon"></i>
+                    </div>
+                </div> -->
+                <!-- <div class="main-gray"></div> -->
+            </div>
+            
+        </div>
+            
+        <!-- 脚部 -->
+        <div class="footer">
+            <div class="personal-center homepage">
+                <img src="./img/首页蓝色@2x.png" alt="" class="personal-center-img">
+                <span class="personal-center-word blue">首页</span>
+            </div>
+            <div class="personal-center entrust">
+                <img src="./img/委托底部@2x.png" alt="" class="personal-center-img">
+                <span class="personal-center-word">委托</span>
+            </div>
+            <div class="personal-center check">
+                <img src="./img/核查底部@2x.png" alt="" class="personal-center-img">
+                <span class="personal-center-word">核查</span>
+            </div>
+            <div class="personal-center census">
+                <img src="./img/统计底部@2x.png" alt="" class="personal-center-img">
+                <span class="personal-center-word">统计</span>
+            </div>
+            <div class="personal-center personal">
+                <img src="./img/我的底部@2x.png" alt="" class="personal-center-img">
+                <span class="personal-center-word">我的</span>
+            </div>
+        </div> 
+
+
+    </div>
+</body>
+
+</html>
+<script src="./js/jsonData.js"></script>
+<script>
+    $(function(){
+        // 总结：
+        // localstorage 如果不删除会一直存在
+        // sessionStorage 关闭浏览器就会消失
+        var huoqu = sessionStorage.getItem('name')
+        console.log(huoqu)
+        console.log(mes.data)
+        // 渲染数据
+        var datalist = mes.data
+        for(var i = 0;i<datalist.length;i++){
+            var $div = $(`
+                <div class="main-every">
+                    <div class="main-every-left"><img src="${datalist[i].logo}" alt="" class="main-every-left-img"></div>
+                    <div class="main-every-right">
+                        <h4 class="every-right-title">${datalist[i].come} - ${datalist[i].name}</h4>
+                        <span class="every-right-date">${datalist[i].subTime}</span>
+                        <div class="every-right-passage">${datalist[i].details}</div>
+                        <i class="every-right-icon"></i>
+                    </div>
+                </div>
+                <!-- 灰色条 -->
+                <div class="main-gray"></div>
+            `)
+            $('.mian-every-all').append($div)
+        }
+        console.log($('.every-right-icon'))
+        $('.every-right-icon').click(function(){
+            if($(this).prev().css('overflow') == 'hidden'){
+                $(this).prev().css({
+                    'overflow':'auto',
+                    'white-space':'normal'
+                })
+            }else{
+                $(this).prev().css({
+                    'overflow':'hidden',
+                    'white-space':'nowrap'
+                })
+            }
+
+        })
+
+        layui.use(['carousel', 'form'], function () {
+            var carousel = layui.carousel,
+                form = layui.form;
+
+            //常规轮播
+            carousel.render({
+                elem: '#test1',
+                // arrow: 'always',
+                interval:1000,
+                // anim:'updown'
+            })
+        })
+        $('.homepage').click(function(){
+            location.href = './homepage.html'
+        })
+        $('.entrust').click(function(){
+            location.href = './entrust.html'
+        })
+        $('.check').click(function(){
+            location.href = './check.html'
+        })
+        $('.census').click(function(){
+            location.href = './census.html'
+        })
+        $('.personal').click(function(){
+            location.href = './personal.html'
+        })
+
+
+    })
+</script>
+
+
+
+
+
+
+
+
+
+
+

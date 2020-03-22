@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>消息列表</title>
+    <link rel="stylesheet" href="./css/case.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <script src="./js/font-auto.js"></script>
+    <script src="./js/zepto.min.js"></script>
+</head>
+<body>
+    <div class="box">
+        <div class="head">
+            <i class="head-icon" onclick="history.go(-1)"></i>
+            <span class="head-word">消息列表</span>
+        </div>
+        <div class="main-list">
+            <div class="main-list-all">
+                <!-- <div class="main-list-all-icon"></div>
+                <div class="main-list-left"><img src="./img/凯莱德logo@2x.png" alt="" class="main-list-left-image"></div>
+                <div class="main-list-right">
+                    <h6 class="main-list-right-word">候选人为陈万先的委托,由CBC信用管理有限公司核查完成，请进入委托界面查看详情</h6>
+                    <div class="main-list-right-date">
+                        <img src="./img/日历@2x.png" alt="" class="list-right-rili"><span>2018-03-13</span>
+                        <img src="./img/时间@2x.png" alt="" class="list-right-time"><span>14:20</span>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/listData.js"></script>
+<script>
+    $(function(){
+        var listdata = mesa.data
+        console.log(listdata)
+        for(var i=0;i<listdata.length;i++){
+            var $div = $(`
+            <div class="main-list-all">
+                <div class="main-list-all-icon" id = "${listdata[i].state}"></div>
+                <div class="main-list-left"><img src="${listdata[i].logo}" alt="" class="main-list-left-image"></div>
+                <div class="main-list-right">
+                    <h6 class="main-list-right-word">${listdata[i].word}</h6>
+                    <div class="main-list-right-date">
+                        <img src="./img/日历@2x.png" alt="" class="list-right-rili"><span>${listdata[i].subTime}</span>
+                        <img src="./img/时间@2x.png" alt="" class="list-right-time"><span>${listdata[i].subTimeb}</span>
+                    </div>
+                </div>
+            </div>
+            `)
+            $('.main-list').append($div)
+            $('.main-list-all-icon').each(function(){
+                if($(this).attr('id') == '0'){
+                    $(this).css('display','none')
+                }else if($(this).attr('id') == '1'){
+                    $(this).css('display','block')
+                }
+            })
+
+
+
+        }
+    })
+    
+</script>
+</html>

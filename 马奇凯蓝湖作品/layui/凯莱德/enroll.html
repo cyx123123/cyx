@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/enroll.css">
+</head>
+
+<body>
+    <div class="box pr">
+        <div class="header">
+            <img src="./images/返回按钮.png" alt="" onclick="history.go(-1)">
+            <span class="font16 fb">账号登录</span>
+        </div>
+        <div class="main">
+            <div class="main-logo">
+                <img src="./images/logo.png" alt="">
+            </div>
+            <div class="main-two">
+                <div><input class="bornone font16" type="text" placeholder="请输入用户名"></div>
+                <div><input class="mi bornone font16" type="password" placeholder="请输入登录密码">
+                    <img class="pa eyes" src="./images/眼睛.png" alt=""></div>
+            </div>
+            <div class="main-three">
+                <button class="font15 fb font-white bornone">登录</button>
+            </div>
+        </div>
+        <div class="footer font-F1 font12 pa">
+            登录遇到困难？请联系客服400-0000-0000
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./js/font-auto.js"></script>
+<script src="./js/jquery-min-3.4.1.js"></script>
+<script>
+    $('.main-two>div').click(function() {
+        $(this).addClass('border-bottom').siblings().removeClass()
+    })
+    $('.eyes').click(function() {
+        if ($('.mi').attr('type') === 'password') {
+            $('.mi').attr('type', 'text')
+        } else {
+            $('.mi').attr('type', 'password')
+        }
+
+    })
+</script>

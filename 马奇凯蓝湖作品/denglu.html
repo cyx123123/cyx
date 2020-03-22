@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" href="./css/case.css">
+    <link rel="stylesheet" href="./css/denglu.css">
+    <script src="./js/font-auto.js"></script>
+    <!-- <script src="./js/jquery-min-3.4.1.js"></script> -->
+    <script src="./js/zepto.min.js"></script>
+</head>
+<body>
+    <div class="box">
+        <!-- 头部 -->
+        <div class="box-head">
+            <i class="box-head-icon" onclick="history.go(-1)"></i>
+            <span class="box-head-word">账号登录</span>
+        </div>
+        <!-- 中间 -->
+        <div class="box-main">
+            <div class="box-main-logo"></div>
+            <!-- <div class="input"> -->
+                <input type="text"  class="username bb-gray" placeholder="请输入账号" value="">
+                <input type="password"  class="password bb-gray" placeholder="请输入登录密码" value="">
+            <!-- </div> -->
+            
+            <div class="box-main-false">用户名或密码不对</div>
+            <div class="submit gray">登录</div>
+            <p class="box-main-word">登录遇到困难？请联系客服400-0000-0000</p>
+        </div>
+    </div>
+
+</body>
+</html>
+<script>
+        $(function(){
+            
+            // $('.username').focus(function(){
+            //     if($(this).val() == '' && $('#password').val() == ''){
+            //         $('.submit').removeClass('gray-x').addClass('gray')
+            //     }else{
+            //         $('.submit').removeClass('gray').addClass('gray-x')
+            //     }
+            // });
+
+            // $('.username').blur(function(){
+            //     // alert($(this).val());
+            //     if($(this).val() !=''){
+            //         $(this).addClass('bb-blue')
+            //     }else{
+            //          $(this).addClass('bb-red')
+            //     }
+            // })
+
+            // $('.password').blur(function(){
+            //     // alert($(this).val());
+            //     if($(this).val() !=''){
+            //         $(this).addClass('bb-blue')
+            //     }else{
+            //          $(this).addClass('bb-red')
+            //     }
+            // })
+            $('.username').on('input',function(){
+                // console.log(this)
+                if ($(this).val() != '') {
+                    if ($(this).hasClass('bb-red')) {
+                        $(this).removeClass('bb-red')
+                    } else {
+                        $(this).addClass('bb-gray')
+                    }
+                } else {
+                    if ($(this).hasClass('bb-gray')) {
+                        $(this).removeClass('bb-gray').addClass('bb-red')
+                    } else {
+                        $(this).addClass('bb-red')
+                    }
+                }
+                if ($(this).val() != '' && $('.password').val() != '') {
+                    $('.submit').removeClass('gray').addClass('blue')
+                } else {
+                    $('.submit').removeClass('blue').addClass('gray')
+                }
+            })
+            $('.password').on('input',function(){
+                if($(this).val() != '' && $('.username').val() != ''){
+                    if($(this).hasClass('bb-red')){
+                        $(this).removeClass('bb-red')
+                    }else{
+                        $(this).addClass('bb-gray')
+                    }
+                    $('.submit').removeClass('gray').addClass('blue')
+                }else{
+                    if($(this).hasClass('bb-gray')){
+                        $(this).removeClass('bb-gray').addClass('bb-red')
+                    }else{
+                        $(this).addClass('bb-red')
+                    }
+                    $('.submit').removeClass('blue').addClass('gray')
+                }
+                
+            })
+            $('.password').focus(function(){
+                // redh.style.opacity = '1'
+                $('.box-main-false').css('opacity','0')
+            })
+            $('.username').focus(function(){
+                // redh.style.opacity = '1'
+                $('.box-main-false').css('opacity','0')
+            })
+            console.log($('.box-main-submit'))
+            $('.submit').click(function(){
+                var reg1 = /^\d{11}$/;
+                var v = $('.username').val();
+                var reg2 = /^\w{6,}$/;
+                var vv = $('.password').val();
+                if($('.username').val() != '' && $('.password').val() != ''){
+                    if(reg1.test(v) && reg2.test(vv)){
+                            $('.submit').click(function(){
+                                var group = {
+                                    name:$('.username').val(),
+                                    pwd:$('.password').val()
+                                }
+                                sessionStorage.setItem('name',JSON.stringify(group))
+                                if($('.submit').hasClass('blue')){
+                                    location.href = './homepage.html'
+                                }
+                            })
+                    }else{
+                        $('.box-main-false').css('opacity','1')
+                    }
+                }else{
+                    $('.box-main-false').css('opacity','1')
+                }
+            })
+            
+            // $('.submit').click(function(){
+            //     // localstorage存对象
+            //     var group = {
+            //         name:$('.username').val(),
+            //         pwd:$('.password').val()
+            //     }
+            //     sessionStorage.setItem('name',JSON.stringify(group))
+            //     // if($(this).hasClass('blue')){
+            //     //     location.href = './首页原版.html'
+            //     // }
+            // })
+
+        })
+        // var username = document.querySelector('.username')
+        // var password = document.querySelector('.password')
+        // var button = document.querySelector('.submit')
+        // var redh = document.querySelector('.box-main-false')
+        // button.onclick = function(){
+        //     var reg1 = /^\d{11}$/
+        //     var reg2 = /^\w{6,}$/ 
+        //     if(password.value != "" && username.value != ''){
+        //         if(reg1.test(username.value) && reg2.test(password.value)){
+        //             $('.submit').click(function(){
+        //                 if($(this).hasClass('blue')){
+        //                     location.href = './首页原版.html'
+        //                 }
+        //             })
+        //         }else{
+        //             redh.style.opacity = '1'
+        //         }
+                
+        //     }else{
+        //         redh.style.opacity = '1'
+        //     }
+        // }
+        
+</script>

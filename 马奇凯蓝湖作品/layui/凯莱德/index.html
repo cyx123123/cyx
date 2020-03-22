@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/load.css">
+</head>
+
+<body>
+    <div class="box">
+        <div class="logo">
+            <img src="./images/公司logo.png" alt="">
+        </div>
+        <div class="word">
+            <span class="font16 font-white">职场中  展现最真实的自己</span>
+        </div>
+        <div class="btn mt130">
+            <button class="enroll font16 fb font-F1 bornone" onclick="mask_fullscreen()">登录</button>
+            <button class="register font16 font-white fb mt20 bornone">注册</button>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./js/jquery-min-3.4.1.js"></script>
+<script src="./js/font-auto.js"></script>
+<script src="./js/load-min.js"></script>
+<script>
+    function mask_fullscreen() {
+        $.mask_fullscreen(1000);
+        location.href = 'enroll.html'
+    }
+    $('.register').click(function() {
+        location.href = 'register.html'
+    })
+</script>

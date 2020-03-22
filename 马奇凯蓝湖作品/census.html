@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>统计</title>
+    <link rel="stylesheet" href="./css/case.css">
+    <link rel="stylesheet" href="./css/census.css">
+    <script src="./js/font-auto.js"></script>
+    <script src="./js/zepto.min.js"></script>
+    <!-- <script src="./js/jquery-min-3.4.1.js"></script> -->
+    <script src="./js/echarts.js"></script>
+</head>
+<body>
+    <div class="box">
+        <!-- 头部 -->
+        <div class="head">
+            <div class="head-search"><i class="icon-search"></i>搜索候选人姓名</div>
+            <img src="./img/委托-更改.png" alt="" class="head-jiahao">
+            <span class="head-word">下委托</span>
+        </div>
+        <!-- 中间 -->
+        <div class="main">
+            <!-- 上面饼图 -->
+            <div class="main-bing">
+                <h5 class="main-bing-title">造假比例</h5>
+                <div id="main-bing-word">
+                    <span class="main-bing-word-gray">委托总数  1232人</span>
+                </div>
+            </div>
+            <!-- 上面饼图 -->
+            <div class="main-kuang">
+                <h5 class="main-bing-title">差异项比例</h5>
+                <div id="main-kuang-word">
+                    <!-- <span class="main-kuang-word-gray">委托总数  1232人</span> -->
+                </div>
+            </div>
+
+        </div>
+        <!-- 脚部 -->
+        <div class="footer">
+            <div class="personal-center homepage">
+                <img src="./img/灰色首页@2x.png" alt="" class="personal-center-img">
+                <span class="personal-center-word">首页</span>
+            </div>
+            <div class="personal-center entrust">
+                <img src="./img/委托底部@2x.png" alt="" class="personal-center-img">
+                <span class="personal-center-word">背调</span>
+            </div>
+            <div class="personal-center check">
+                <img src="./img/核查底部@2x.png" alt="" class="personal-center-img">
+                <span class="personal-center-word">协查</span>
+            </div>
+            <div class="personal-center census">
+                <img src="./img/统计蓝色@2x.png" alt="" class="personal-center-img">
+                <span class="personal-center-word blue">统计</span>
+            </div>
+            <div class="personal-center personal">
+                <img src="./img/我的底部@2x.png" alt="" class="personal-center-img">
+                <span class="personal-center-word">我的</span>
+            </div>
+        </div> 
+    </div>
+</body>
+<script>
+    var bingecharts = echarts.init(document.getElementById('main-bing-word'))
+    option = {
+        tooltip: {
+            trigger: 'item',
+            formatter: '{a} <br/>{b}: {c} ({d}%)'
+        },
+        legend: {
+            orient: 'vertical',
+            left: 10,
+            top: 20,
+            // data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
+        },
+        series: [
+            {
+                name: '访问来源',
+                type: 'pie',
+                radius: ['50%', '70%'],
+                avoidLabelOverlap: false,
+                // left:50,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center'
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle: {
+                            fontSize: '30',
+                            fontWeight: 'bold'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data: [
+                    {value: 335, name: '个人身份认证'},
+                    {value: 310, name: '教育信息核实'},
+                    {value: 234, name: '工作能力评估'},
+                    {value: 135, name: '就业信息'},
+                    // {value: 1548, name: '搜索引擎'}
+                ]
+            }
+        ],
+        color:['#7DD160','#FDBC02','#D2C5C5','#87C6D8']
+    };
+
+    bingecharts.setOption(option)
+    setTimeout(function () {
+        window.onresize = function () {
+            bingecharts.resize();
+        }
+    }, 200)
+
+
+    var kuangcharts = echarts.init(document.getElementById('main-kuang-word'))
+    option1 = {
+        dataset: {
+            source: [
+                ['score', 'amount', 'product'],
+                [89.3, 58212, 'Matcha Latte'],
+                [57.1, 78254, 'Milk Tea'],
+                [74.4, 41032, 'Cheese Cocoa'],
+                [50.1, 12755, 'Cheese Brownie'],
+                [89.7, 20145, 'Matcha Cocoa'],
+                [68.1, 79146, 'Tea'],
+                [19.6, 91852, 'Orange Juice'],
+                [10.6, 101852, 'Lemon Juice'],
+                [32.7, 20112, 'Walnut Brownie']
+            ]
+        },
+        grid: {containLabel: true},
+        xAxis: {name: 'amount'},
+        yAxis: {type: 'category'},
+        visualMap: {
+            orient: 'horizontal',
+            left: 'center',
+            min: 10,
+            max: 100,
+            text: ['High Score', 'Low Score'],
+            // Map the score column to color
+            dimension: 0,
+            inRange: {
+                color: ['#D7DA8B', '#E15457']
+            }
+        },
+        series: [
+            {
+                type: 'bar',
+                encode: {
+                    // Map the "amount" column to X axis.
+                    x: 'amount',
+                    // Map the "product" column to Y axis
+                    y: 'product'
+                }
+            }
+        ]
+    };
+
+    kuangcharts.setOption(option1)
+    // setTimeout(function () {
+    //     window.onresize = function () {
+    //         kuangcharts.resize();
+    //     }
+    // }, 200)
+
+    $(function(){
+        // 底部转换
+        $('.homepage').click(function(){
+            location.href = './homepage.html'
+        })
+        $('.entrust').click(function(){
+            location.href = './entrust.html'
+        })
+        $('.check').click(function(){
+            location.href = './check.html'
+        })
+        $('.census').click(function(){
+            location.href = './census.html'
+        })
+        $('.personal').click(function(){
+            location.href = './personal.html'
+        })
+    })
+
+
+</script>
+
+</html>
+
+
+
+
+

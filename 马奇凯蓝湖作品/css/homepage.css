@@ -1,0 +1,212 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+.box {
+    width: 100%;
+    /* height: 100%; */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.box-header{
+    width: 100%;
+    height: 5rem;
+    background-color: #568FD6;
+    padding-top: 1.3rem;
+    box-sizing: border-box;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    /* background: red; */
+}
+.box-header-search{
+    width:32rem;
+    height:2.9rem;
+    line-height: 2.9rem;
+    background:rgba(255, 255, 255, 0.2);
+    box-shadow:0px 1px 5px 0px rgba(7, 43, 105, 0.43);
+    border-radius:1.4rem;
+    margin-left: 1.1rem;
+    font-size:1.3rem;
+    font-family:PingFangSC;
+    font-weight:400;
+    color: #ffffff;
+    padding-left: 3rem;
+    box-sizing: border-box;
+    position: relative;
+}
+.icon-search{
+    position: absolute;
+    left: 0.9rem;
+    top: 0.8rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    background: url('../img/要的搜索按钮@2x.png') no-repeat;
+    background-size: 100% 100%;
+}
+.box-header-right-img{
+    margin-top: 0.1rem;
+    margin-left:1.2rem;
+}
+.box-header-right-word{
+    position: absolute;
+    left: 34.2rem;
+    top: 3.5rem;
+    font-size:0.8rem;
+    font-family:PingFangSC;
+    font-weight:400;
+    color:#FFFFFF;
+    line-height:1.1rem;
+}
+.box-header-icon-red{
+    position: absolute;
+    left: 35.5rem;
+    top: 1.2rem;
+}
+/* 中间 */
+.box-main{
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    box-sizing: border-box;
+}
+.box-main-blueimg{
+    width: 100% !important;
+    height: 13rem!important;
+    background: url('../img/蓝色图图@2x.png') no-repeat;
+    background-size: 100% 100%;
+}
+.box-main-blueimg img{
+    width: 100%;
+    height: 100%;
+   
+}
+.mian-every-all{
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.main-every{
+    width: 100%;
+    /* height: 6.8rem; */
+    /* background: red; */
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+}
+.main-every-left{
+    width:4rem;
+    height:4rem;
+    background:#ffffff;
+    border-radius:50%;
+    border:1px solid #DDDDDD;
+    box-sizing: border-box;
+    margin: 1.4rem 1.2rem 1.4rem 1.4rem;
+    position: relative;
+    /* background: black; */
+}
+.main-every-left-img{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.main-every-right{
+    width: 30.8rem;
+    /* height: 6.2rem; */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    position: relative;
+    /* background: palegreen; */
+}
+.every-right-title{
+    width:12.1rem;
+    /* height:1.5rem; */
+    font-size:1.5rem;
+    font-family:PingFangSC;
+    font-weight:400;
+    color:#333333;
+    margin-top: 1.6rem;
+    /* background: yellow; */
+}
+.every-right-date{
+    position: absolute;
+    top: 1.7rem;
+    right: 1.2rem;
+    width:4.8rem;
+    height:1.2rem;
+    font-size:1.1rem;
+    font-family:PingFangSC;
+    font-weight:400;
+    color:#CCCCCC;
+    /* background: purple; */
+}
+.every-right-passage{
+    width:26.7rem;
+    font-size:1.3rem;
+    font-family:PingFangSC;
+    font-weight:400;
+    color:#999999;
+    line-height:1.6rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0.8rem 0;
+}
+.every-right-icon{
+    position: absolute;
+    top: 4.3rem;
+    right: 1.3rem;
+    width: 1.1rem;
+    height: 0.6rem;
+    background: url('../img/下拉按钮下.png') no-repeat;
+    background-size: 100% 100%;
+}
+/* 灰色条 */
+.main-gray{
+    width:309px;
+    height:1px;
+    background:#CDCDCD;
+    margin-left: 6.6rem;
+}
+/* 脚部 */
+.footer {
+    width: 100%;
+    height: 4.4rem;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: justify;
+    -webkit-box-flex: 1;
+    position: fixed;
+    z-index: 99;
+    bottom: 0rem;
+    left: 0rem;
+    background: #ffffff;
+}
+.personal-center {
+    width: 7.5rem;
+    height: 4.4rem;
+}
+.personal-center-img {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 2.7rem;
+    margin-top: 0.7rem;
+}
+.personal-center-word {
+    text-align: center;
+    display: block;
+    height:0.9rem;
+    font-size: 0.9rem;
+    color: #7C7C7C;
+}
+.blue {
+    color: #5488E1;
+}

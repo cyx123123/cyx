@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册新用户</title>
+    <link rel="stylesheet" href="./css/case.css">
+    <link rel="stylesheet" href="./css/ZCnewyonghu.css">
+    <link rel="stylesheet" href="./layer.mobile-v2.0/layer_mobile/need/layer.css">
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <script src="./js/font-auto.js"></script>
+    <script src="./js/zepto.min.js"></script>
+    
+    <script src="./layui/layui.all.js"></script>
+    <script src="./layer.mobile-v2.0/layer_mobile/layer.js"></script>
+    <script src="./js/jquery-min-3.4.1.js"></script>
+</head>
+<body>
+    <div class="box">
+        <!-- 头部 -->
+        <div class="box-head">
+            <i class="box-head-icon" onclick="history.go(-1)"></i>
+            <span class="box-head-word">注册</span>
+        </div>
+        <!-- 中间 -->
+        <div class="box-main">
+            <div class="box-main-modul box-qiyename">
+                <h5 class="main-modul-title">企业名称</h5>
+                <span class="main-modul-word">凯莱德北京信用管理有限公司</span>
+            </div>
+            <!-- 灰线条 -->
+            <div class="box-main-gray-line"></div>
+            <div class="industry-type">
+                <h5 class="main-modul-title">行业类型</h5>
+                <i class="main-modul-icon"></i>
+            </div>
+            <div class="box-main-modul ZCRYguimo">
+                <h5 class="main-modul-title">人员规模</h5>
+                <i class="main-modul-icon"></i>
+            </div>
+            <!-- 灰线条 -->
+            <div class="box-main-gray-line"></div>
+            <div class="box-main-modul">
+                <h5 class="main-modul-title">营业执照</h5>
+                <p class="main-modul-red"> * <span class="main-modul-red-word">需上传加盖公司红章的证件照片</span></p>
+            </div>
+            <!-- 上传身份证照片 -->
+            <div class="main-idimg">
+                <div class="main-idimg-every"><img src="./img/执照样板@2x.png" alt=""></div>
+                <div class="main-idimg-every">
+                    <div class="layui-upload">
+                        <!-- <button type="button" class="layui-btn" id="test1">上传图片</button> -->
+                        <div class="layui-upload-list" id="test1">
+                            <img class="layui-upload-img" id="demo1">
+                            <p id="demoText" class="main-idimg-every-word">上传工商执照</p>
+                        </div>
+                    </div>  
+                    <!-- <img  alt="" class="main-idimg-every-icon"> -->
+                    <!-- <p class="main-idimg-every-word">上传工商执照</p> -->
+                </div>
+                <div class="main-idimg-every">
+                    <div class="layui-upload">
+                        <!-- <button type="button" class="layui-btn" id="test1">上传图片</button> -->
+                        <div class="layui-upload-list" id="test2">
+                            <img class="layui-upload-img" id="demo2" >
+                            <p id="demoText2" class="main-idimg-every-word">上传三证合一</p>
+                        </div>
+                    </div>  
+                    <!-- <img src="./img/上传三证合一@2x.png" alt="" class="main-idimg-every-icon"> -->
+                    <!-- <p class="main-idimg-every-word">上传三证合一</p>         -->
+                </div>
+            </div>
+            <!-- 灰快 -->
+            <div class="box-main-gray-block"></div>
+            <!-- 管理员姓名 -->
+            <div class="box-main-modul">
+                <h5 class="main-modul-title">管理员姓名</h5>
+                <input type="text" placeholder="请输入管理员姓名" class="main-manage-name guanliyuan" value="">
+            </div>
+            <!-- 灰线条 -->
+            <div class="box-main-gray-line"></div>
+            <!-- 手机号 -->
+            <div class="box-main-modul">
+                <h5 class="main-modul-title">手机号</h5>
+                <input type="text" placeholder="请输入手机号" class="main-manage-name mobel-phone" value="">
+                <div class="mobel-phone-red">请填写正确的手机号！</div>
+            </div>
+            <!-- 灰线条 -->
+            <div class="box-main-gray-line"></div>
+            <!-- 验证码 -->
+            <div class="box-main-modul">
+                <h5 class="main-modul-title">验证码</h5>
+                <!-- <div class="main-modul-number">获取验证码</div> -->
+                <input type="button" class="main-modul-number" value="获取验证码">
+            </div>
+            <!-- 灰快 -->
+            <div class="box-main-gray-block"></div>
+            <!-- 邀请码 -->
+            <div class="box-main-modul">
+                <h5 class="main-modul-title">邀请码</h5>
+                <input type="text" placeholder="请输入您的邀请码" class="main-manage-name yaoqingma" value="">
+            </div>
+            <!-- 注册 -->
+            <div class="main-create-new1 main-create-new2">注册</div>
+            <div class="main-create-word">通过手机号可以确认是您本人操作，核实的所有信息将与此手机号码绑定， 注册即表示你同意《凯莱德服务协议》</div>
+        </div>
+    </div>
+</body>
+<script>
+    // layui.use('layer', function () {
+    // 加上以下代码，layui和layer就不会发生冲突
+    // 将layur.js放在layui.js的下面
+    layui.use('layer', function () {
+        var layer = layui.layer;
+
+    });
+    $('.industry-type').click(function(){
+        //底部对话框
+        layer.open({
+            content: "",
+            btn: ['删除', '取消'],
+            skin: 'footer',
+            yes: function(index){
+            layer.open({content: '执行删除操作'})
+            }
+        });
+        $('.layui-m-layercont').append(`
+        <li class = 'list-li'>计算机</li>
+        <li class = 'list-li'>新东方</li>
+        <li class = 'list-li'>挖掘机</li>
+        `)
+        $('.list-li').click(function(){
+            // $(this).addClass('font-blue')
+            $('.layui-m-layercont').hide()
+            $('.layui-m-layermain').hide()
+            $('.layui-m-layershade').hide()
+            $('.industry-type-icon').html($(this).text())
+
+        })
+
+    })
+
+    // 上传
+    //普通图片上传
+    layui.use('upload', function(){
+    var $ = layui.jquery,upload = layui.upload;
+    
+        //普通图片上传
+        var uploadInst = upload.render({
+            elem: '#test1'
+            ,url: 'https://httpbin.org/post' //改成您自己的上传接口
+            ,before: function(obj){
+            //预读本地文件示例，不支持ie8
+            obj.preview(function(index, file, result){
+                $('#demo1').attr('src', result); //图片链接（base64）
+            });
+            }
+            ,done: function(res){
+            //如果上传失败
+            if(res.code > 0){
+                return layer.msg('上传失败');
+            }
+            //上传成功
+            }
+            ,error: function(){
+            //演示失败状态，并实现重传
+            var demoText = $('#demoText');
+            demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+            demoText.find('.demo-reload').on('click', function(){
+                uploadInst.upload();
+            });
+            }
+        });
+    })
+    // 上传
+    //普通图片上传
+    layui.use('upload', function(){
+    var $ = layui.jquery,upload = layui.upload;
+    
+        //普通图片上传
+        var uploadInst = upload.render({
+            elem: '#test2'
+            ,url: 'https://httpbin.org/post' //改成您自己的上传接口
+            ,before: function(obj){
+            //预读本地文件示例，不支持ie8
+            obj.preview(function(index, file, result){
+                $('#demo2').attr('src', result); //图片链接（base64）
+            });
+            }
+            ,done: function(res){
+            //如果上传失败
+            if(res.code > 0){
+                return layer.msg('上传失败');
+            }
+            //上传成功
+            }
+            ,error: function(){
+            //演示失败状态，并实现重传
+            var demoText = $('#demoText2');
+            demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+            demoText.find('.demo-reload').on('click', function(){
+                uploadInst.upload();
+            });
+            }
+        });
+    })
+    // 手机验证码
+    $(function(){
+        $(".main-modul-number").click(function(){
+            var disabled = $('.main-modul-number').attr('disable')
+            if(disabled){
+                return false
+            }
+            var reg1 = /^1[3|4|5|7|8|9]\d{9}$/;
+            var v = $('.mobel-phone').val();
+            if(!reg1.test(v)){
+                // alert('请填写正确的手机号！')
+                $('.mobel-phone').css('display','none')
+                $('.mobel-phone-red').css('display','block')
+                return false
+            }else{
+                settime()
+            }
+            
+        })
+        $('.mobel-phone-red').click(function(){
+            $('.mobel-phone').css('display','block')
+            $('.mobel-phone-red').css('display','none')
+        })
+        // $('.mobel-phone').blur(function(){
+        //     $('.mobel-phone').css('display','none')
+        //     $('.mobel-phone-red').css('display','block')
+        // })
+        // 手机验证码倒计时
+        var countdown = 60;
+        var module_number = $(".main-modul-number");
+        function settime() {
+          if (countdown == 0) {
+            module_number.attr("disabled", false);
+            module_number.val("获取验证码");
+            $('.main-modul-number').removeClass('gray-number');
+            countdown = 60;
+            return false;
+          } else {
+            $(".generate_code").attr("disabled", true);
+            module_number.val("重新发送(" + countdown + ")");
+            $('.main-modul-number').addClass('gray-number');
+            countdown--;
+          }
+          setTimeout(function() {
+            settime();
+          }, 1000);
+        }
+        // 验证注册按钮
+        $('.main-manage-name').on('input',function(){
+            if($('.mobel-phone').val() != '' && $('.guanliyuan').val() != '' && $('.yaoqingma').val() != ''){
+                $('.main-create-new1').removeClass('main-create-new2').addClass('main-create-new3')
+            }else{
+                $('.main-create-new1').removeClass('main-create-new3').addClass('main-create-new2')
+            }
+
+        })
+        $('.main-create-new1').click(function(){
+            if($(this).hasClass('main-create-new3')){
+                location.href = './登录.html'
+            }
+        })
+        
+        // 跳转页
+        $('.industry-type').click(function(){
+            location.href = './ZCHYleixing.html'
+        })
+        $('.ZCRYguimo').click(function(){
+            location.href = './ZCRYguimo.html'
+        })
+    })
+</script>
+</html>
+
+
+
+
+
+
+

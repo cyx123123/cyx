@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>账号详情</title>
+    <link rel="stylesheet" href="./css/case.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <script src="./js/font-auto.js"></script>
+</head>
+<body>
+    <div class="box">
+        <!-- 账号详情 -->
+        <div class="head head-details">
+            <i class="head-icon" onclick="history.go(-1)"></i>
+            <span class="head-word">子账号管理</span>
+            <div class="button-right">保存</div>
+        </div>
+        <div class="main">
+            <div class="main-modula HBshouji">
+                <h5 class="main-modula-title">手机号</h5>
+                <span class="main-modula-word">15019234343</span>
+            </div>
+            <div class="main-modula GLYbiangeng">
+                <h5 class="main-modula-title">姓名</h5>
+                <span class="main-modula-word">王婧婧</span>
+            </div>
+            <div class="main-modula">
+                <h5 class="main-modula-title">职位</h5>
+                <span class="main-modula-word">HR主管</span>
+            </div>
+            <div class="main-modula GHyouxiang">
+                <h5 class="main-modula-title">邮箱</h5>
+                <span class="main-modula-word">wanxian.chen@colredit.com</span>
+            </div>
+        </div> 
+    </div>
+</body>
+<script>
+    $(function(){
+        $('.HBshouji').click(function(){
+            location.href = './HBshouji.html'
+        })
+        $('.GLYbiangeng').click(function(){
+            location.href = './GLYbiangeng.html'
+        })
+        $('.GHyouxiang').click(function(){
+            location.href = './GHyouxiang.html'
+        })
+
+    })
+</script>
+</html>

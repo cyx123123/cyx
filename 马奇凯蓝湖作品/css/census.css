@@ -1,0 +1,162 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+.box {
+    width: 100%;
+    /* height: 100%; */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.head{
+    width: 100%;
+    height: 5rem;
+    background-color: #568FD6;
+    padding-top: 1.3rem;
+    box-sizing: border-box;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.head-search {
+    width: 32rem;
+    height: 2.9rem;
+    line-height: 2.9rem;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 1px 5px 0px rgba(7, 43, 105, 0.43);
+    border-radius: 1.4rem;
+    margin-left: 1.1rem;
+    font-size: 1.3rem;
+    font-family: PingFangSC;
+    font-weight: 400;
+    color: #ffffff;
+    padding-left: 3rem;
+    box-sizing: border-box;
+    position: relative;
+}
+.icon-search {
+    position: absolute;
+    left: 0.9rem;
+    top: 0.8rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    background: url('../img/要的搜索按钮@2x.png') no-repeat;
+    background-size: 100% 100%;
+}
+.head-jiahao{
+    position: absolute;
+    right: 1.5rem;
+    top: 1.2rem;
+    width: 1.8rem;
+    height: 1.8rem;
+}
+.head-word{
+    position: absolute;
+    right: 1.2rem;
+    top: 3.5rem;
+    font-size:0.8rem;
+    font-family:PingFangSC;
+    font-weight:400;
+    color:#FFFFFF;
+    line-height:1.1rem;
+}
+/* 中间 */
+.main {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    box-sizing: border-box;
+    
+}
+.main-bing{
+    width: 100%;
+    height: 20rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.main-bing-title{
+    width: 100%;
+    height: 3.8rem;
+    line-height: 3.8rem;
+    color: #494949;
+    font-size:1.5rem;
+    font-family:PingFangSC;
+    font-weight:400;
+    padding-left: 2.5rem;
+    box-sizing: border-box;
+    border-bottom: 0.1rem solid #DDDDDD;
+}
+#main-bing-word{
+    width: 100%;
+    height: 16.4rem;
+    position: relative;
+}
+.main-bing-word-gray{
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    color: #999999;
+    font-size:1.2rem;
+    font-family:PingFangSC;
+    font-weight:400;
+}
+/* 下面框图 */
+.main-kuang{
+    width: 100%;
+    height: 34rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+#main-kuang-word{
+    width: 100%;
+    height: 30rem;
+}
+
+
+
+
+
+/* 脚部 */
+.footer {
+    width: 100%;
+    height: 4.4rem;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: justify;
+    -webkit-box-flex: 1;
+    position: fixed;
+    z-index: 99;
+    bottom: 0rem;
+    left: 0rem;
+    background: #ffffff;
+}
+
+.personal-center {
+    width: 7.5rem;
+    height: 4.4rem;
+}
+
+.personal-center-img {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 2.7rem;
+    margin-top: 0.7rem;
+}
+
+.personal-center-word {
+    text-align: center;
+    display: block;
+    height: 0.9rem;
+    font-size: 0.9rem;
+    color: #7C7C7C;
+}
+
+.blue {
+    color: #5488E1;
+}

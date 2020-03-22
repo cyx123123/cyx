@@ -1,0 +1,241 @@
+/*格式化样式*/
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* table {border-collapse:collapse;border-spacing:0;}  */
+
+fieldset,
+img {
+    border: 0
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+var {
+    font-style: normal;
+    font-weight: normal
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal
+}
+
+
+/* 浮动 */
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+
+/* 清除浮动 */
+
+.overhidden {
+    overflow: hidden;
+}
+
+.cb {
+    clear: both;
+}
+
+.clearfloat::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/* 加粗 */
+
+.fb {
+    font-weight: bold;
+}
+
+
+/* 字体颜色 */
+
+.font-red {
+    color: #ba2636;
+}
+
+.font-blue {
+    color: blue;
+}
+
+.font-white {
+    color: #fff;
+}
+
+.font-ccc {
+    color: #cccccc;
+}
+
+.font {
+    color: #6ed8ac;
+}
+
+.font-F1 {
+    color: #5698F1;
+}
+
+.font999 {
+    color: #999999;
+}
+
+
+/* 字体大小 */
+
+.font10 {
+    font-size: 10px;
+}
+
+.font11 {
+    font-size: 11px;
+}
+
+.font12 {
+    font-size: 0.12rem;
+}
+
+.font14 {
+    font-size: 0.14rem;
+}
+
+.font15 {
+    font-size: 0.15rem;
+}
+
+.font16 {
+    font-size: 0.16rem;
+}
+
+.font18 {
+    font-size: 0.18rem;
+}
+
+.font20 {
+    font-size: 0.2rem;
+}
+
+.text-line {
+    text-decoration: line-through;
+}
+
+
+/* 上边距 */
+
+.mt5 {
+    margin-top: 0.05rem;
+}
+
+.mt15 {
+    margin-top: 0.15rem;
+}
+
+.mt10 {
+    margin-top: 0.1rem;
+}
+
+.mt35 {
+    margin-top: 35px;
+}
+
+.mt20 {
+    margin-top: 0.2rem;
+}
+
+.mt130 {
+    margin-top: 1.3rem;
+}
+
+.ml10 {
+    margin-left: 0.1rem;
+}
+
+.ml20 {
+    margin-left: 0.2rem;
+}
+
+.mlr5 {
+    margin: 0 0.05rem;
+}
+
+.mlr10 {
+    margin: 0 0.1rem;
+}
+
+
+/* 行高 */
+
+.lh40 {
+    line-height: 40px;
+}
+
+
+/* 定位 */
+
+.pr {
+    position: relative;
+}
+
+.pa {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.box-center {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+}
+
+.bornone {
+    border: none;
+    outline: none;
+}

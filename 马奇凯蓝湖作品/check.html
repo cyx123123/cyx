@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>协查</title>
+    <link rel="stylesheet" href="./css/case.css">
+    <link rel="stylesheet" href="./css/check.css">
+    <script src="./js/font-auto.js"></script>
+    <script src="./js/zepto.min.js"></script>
+    <!-- <script src="./js/jquery-min-3.4.1.js"></script> -->
+</head>
+<body>
+    <div class="box">
+        <!-- 头部 -->
+        <div class="head">
+            <div class="head-search"><i class="icon-search"></i>搜索委托人姓名</div>
+        </div>
+        <!-- 中间 -->
+        <div class="main">
+            
+            <!-- <div class="main-modula">
+                <div class="main-modula-top">
+                    <div class="modula-top-img blue-img">W<div class="top-icon-blue"><i></i></div></div>
+                    <div class="modula-top-img pink-img">H<div class="top-icon-pink"><i></i></div></div>
+                    <div class="modula-center">
+                        <h5 class="modula-center-title">马奇凯<div class="blue-qiangdan"><img src="./img/抢单@2x.png" alt="">抢单</div></h5>
+                        <p class="modula-center-word">身份证号：<span class="center-word-number">142729199703292711</span></p>
+                    </div>
+                    <div class="modula-right">待协查</div>
+                    
+                </div> 
+                <div class="main-modula-bottom">
+                    职位： <span class="bottom-word">前端工程师</span><span class="bottom-time">2018-03-07</span>
+                    <i class="bottom-delete"></i>
+                </div>
+            </div> -->
+
+        </div>
+        <!-- 脚部 -->
+        <div class="footer">
+            <div class="personal-center homepage">
+                <img src="./img/灰色首页@2x.png" alt="" class="personal-center-img">
+                <span class="personal-center-word">首页</span>
+            </div>
+            <div class="personal-center entrust">
+                <img src="./img/委托底部@2x.png" alt="" class="personal-center-img">
+                <span class="personal-center-word">背调</span>
+            </div>
+            <div class="personal-center check">
+                <img src="./img/蓝色协查@2x.png" alt="" class="personal-center-img">
+                <span class="personal-center-word blue">协查</span>
+            </div>
+            <div class="personal-center census">
+                <img src="./img/统计底部@2x.png" alt="" class="personal-center-img">
+                <span class="personal-center-word">统计</span>
+            </div>
+            <div class="personal-center personal">
+                <img src="./img/我的底部@2x.png" alt="" class="personal-center-img">
+                <span class="personal-center-word">我的</span>
+            </div>
+        </div> 
+    </div>
+</body>
+</html>
+<script src=".//js/jsonData.js"></script>
+<script>
+    $(function(){
+        var datalist = mes.data
+        console.log(datalist)
+        for(var i=0;i<datalist.length;i++){
+            if(datalist[i].state == '0'){
+                datalist[i].state = '等待授权'
+            }else if(datalist[i].state == '1'){
+                datalist[i].state = '已完成'
+            }else if(datalist[i].state == '2'){
+                datalist[i].state = '核查中'
+            }
+            var $div = $(`
+        <div class="main-modula">
+            <div class="main-modula-top">
+                <div class="modula-top-img" id = "${datalist[i].sex}">${datalist[i].name.slice(0,1)}</div>
+                <div class="modula-center">
+                    <h5 class="modula-center-title"><span class="center-title-name">${datalist[i].name}</span>
+                        <div class="blue-qiangdan"><img src="./img/抢单@2x.png" alt="">抢单</div>
+                        <div class="button-word" id = "${datalist[i].differents}"></div></h5>
+                    <p class="modula-center-word">身份证号：<span class="center-word-number">${datalist[i].idcard}</span></p>
+                    <p class="modula-center-word">委托编码：<span class="center-word-code">${datalist[i].code}</span></p>
+                </div>
+                <div class="modula-right">${datalist[i].state}</div>
+            </div> 
+            <div class="main-modula-bottom">
+                职位： <span class="bottom-word">${datalist[i].position}
+                    </span><span class="bottom-time">${datalist[i].subTimeb}</span>
+                <i class="bottom-delete"></i>
+            </div>
+        </div>
+            `)
+            $('.main').append($div)
+
+            $('.modula-right').each(function(){
+                if($(this).text() == '等待授权'){
+                    $(this).addClass('orange-img')
+                    console.log($(this).prev().find('.blue-qiangdan'))
+                    // $(this).prev().find('.blue-qiangdan').addClass('blue-qiangdan-come')
+                    $(this).prev().find('.blue-qiangdan').css('display','block')
+                } 
+                if($(this).text() == '已完成'){
+                    $(this).addClass('green-img')
+                    // console.log($(this).prev().find('.button-word'))
+                    if($(this).prev().find('.button-word').attr('id') == 'true'){
+                        $(this).prev().find('.button-word').addClass('button-green')
+                        $(this).prev().find('.button-word').removeClass('button-red')
+                        $(this).prev().find('.button-word').text('无差异项')
+                    }else if($(this).prev().find('.button-word').attr('id') == 'false'){
+                        $(this).prev().find('.button-word').addClass('button-red')
+                        $(this).prev().find('.button-word').removeClass('button-green')
+                        $(this).prev().find('.button-word').text('有差异项')
+                    }
+                    $(this).parent().next().find('.bottom-delete').css('display','block')
+                }
+                if($(this).text() == '核查中'){
+                    $(this).addClass('blue-img')
+                }
+            })
+            // console.log($('.modula-top-img'))
+            $('.modula-top-img').each(function(){
+                // console.log($(this).attr('id'))
+                if($(this).attr('id') == '0'){
+                    $(this).addClass('pink-image').removeClass('blue-image')
+                }else if($(this).attr('id') == '1'){
+                    $(this).addClass('blue-image').removeClass('pink-image')
+                }
+            })
+            
+        }
+        // 底部转换
+        $('.homepage').click(function(){
+            location.href = './homepage.html'
+        })
+        $('.entrust').click(function(){
+            location.href = './entrust.html'
+        })
+        $('.check').click(function(){
+            location.href = './check.html'
+        })
+        $('.census').click(function(){
+            location.href = './census.html'
+        })
+        $('.personal').click(function(){
+            location.href = './personal.html'
+        })
+
+         // 点击跳转获取信息
+        console.log($('.main-modula'))
+        for(var p=0;p<$('.main-modula').length;p++){
+            // console.log($('.main-modula')[p])
+            $($('.main-modula')[p]).click(function(){
+                // console.log()
+                var infor = {
+                    name: $(this).find($('.center-title-name')).text(),
+                    state: $(this).find($('.modula-right')).text(),
+                    code: $(this).find($('.center-word-code')).text(),
+                    subTime: $(this).find($('.bottom-time')).text(),
+                    idcard: $(this).find($('.center-word-number')).text(),
+                    position: $(this).find($('.bottom-word')).text()
+                }
+                sessionStorage.setItem('name',JSON.stringify(infor))
+                location.href = './WTxiecha.html'
+            })
+        }
+
+
+
+
+
+
+
+
+
+        // for(var z=0;z<$('.modula-right').length;z++){
+
+        //     if($('.modula-right')[z].innerHTML == '0'){
+        //         $('.modula-right')[z].className = 'modula-right orange-img'
+        //         $('.modula-right')[z].innerHTML = '等待授权'
+        //     }else if($('.modula-right')[z].innerHTML == '1'){
+        //         $('.modula-right')[z].className = 'modula-right green-img'
+        //         $('.modula-right')[z].innerHTML = '已完成'
+        //     }else if($('.modula-right')[z].innerHTML == '2'){
+        //         $('.modula-right')[z].className = 'modula-right blue-img'
+        //         $('.modula-right')[z].innerHTML = '核查中'
+        //     }
+        //     // 删除按钮
+        //     for(var l=0;l<$('.bottom-delete').length;l++){
+        //         if($('.modula-right')[z].innerHTML == '1'){
+        //             $('.bottom-delete')[z].style.display = "block"
+        //         }
+        //     }
+        //     // 抢单
+        //     for(var t=0;t<$('.blue-qiangdan').length;t++){
+        //         if($('.modula-right')[z].innerHTML == '等待授权'){
+        //             $('.blue-qiangdan')[z].style.display = 'block'
+        //         }
+        //     }
+        // }
+        // console.log($('.modula-right').html)
+        // if($('.modula-right').html() == '待查办'){
+        //     $('.modula-right').removeClass('green-img').addClass('orange-img')
+        // }else if($('.modula-right').html() == '已完成'){
+        //     $('.modula-right').removeClass('orange-img').addClass('green-img')
+        // }
+        // if($('.modula-right').html() == '已完成'){
+        //     $('.green-img').css({display:'block'})
+        // }
+
+        // 删除按钮
+        // var hhh = $('.modula-right').html()
+        // console.log(hhh)
+        // if($('.modula-right').html() == '已完成'){
+        //     $('.bottom-delete').css('opacity','1')
+        // }
+        // 用性别验证
+        // for(var f=0;f<$('.modula-top-img').length;f++){
+        // console.log($('.modula-top-img')[f].innerHTML)
+        //     if($('.modula-top-img')[f].innerHTML == '0'){
+        //         $('.modula-top-img')[f].className = 'modula-top-img pink-image'
+                
+        //     }else{
+        //         $('.modula-top-img')[f].className = 'modula-top-img blue-image'
+        //     }   
+        // }
+        // 身份证号
+        // console.log($('.center-word-number'))
+        // for(var q=0;q<$('.center-word-number').length;q++){
+        //     // console.log($('.center-word-number')[q].innerHTML.slice(16,17)%2)
+        //     // console.log($('.modula-top-img'))
+        //     for(var q = 0;q<$('.modula-top-img').length;q++){
+        //         if($('.center-word-number')[q].innerHTML.slice(16,17)%2 == 1){
+        //             // console.log($('.modula-top-img')[q].style)
+        //             $('.modula-top-img')[q].innerHTML = 'W<div class="top-icon-blue"><i></i></div>'
+        //             $('.modula-top-img')[q].style.color = '#346ECA'
+        //             $('.modula-top-img')[q].style.background = 'rgba(215, 232, 252, 0.62)'
+        //             $('.modula-top-img')[q].style.textshadow = '0px 1px 4px rgba(52, 110, 202, 0.49)'
+                    
+        //         }else{
+        //             $('.modula-top-img')[q].innerHTML = 'H<div class="top-icon-pink"><i></i></div>'
+        //             $('.modula-top-img')[q].style.color = '#D37F96'
+        //             $('.modula-top-img')[q].style.background = 'rgba(246, 230, 231, 0.62)'
+        //             $('.modula-top-img')[q].style.textshadow = '0px 1px 4px rgba(211, 127, 150, 0.49)'
+        //         }
+        //     }
+        // }
+    })
+
+</script>
+
+
+
+
+

@@ -1,0 +1,102 @@
+@import url(../css/common.css);
+.box {
+    width: 100vw;
+    height: 100vh;
+}
+
+.header {
+    width: 100%;
+    height: 0.5rem;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    position: relative;
+    border-bottom: 0.01rem solid #ccc;
+}
+
+.header>span {
+    height: 0.16rem;
+    display: block;
+}
+
+.header>img {
+    width: 0.08rem;
+    height: 0.15rem;
+    display: block;
+    position: absolute;
+    top: 0.22rem;
+    left: 0.17rem;
+}
+
+.main {
+    width: 100%;
+}
+
+.main-logo {
+    width: 100%;
+    height: 1.5rem;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+}
+
+.main-logo>img {
+    width: 0.81rem;
+    height: 0.81rem;
+    display: block;
+}
+
+.main-two {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: center;
+}
+
+.main-two>div {
+    width: calc(100% - 0.2rem);
+}
+
+.main-two>div:last-child {
+    position: relative;
+}
+
+.border-bottom {
+    border-bottom: 0.01rem solid orangered;
+}
+
+.main-two input {
+    width: 100%;
+    height: 0.5rem;
+    display: block;
+}
+
+.main-two img {
+    width: 0.14rem;
+    height: 0.1rem;
+    right: 0.1rem;
+    top: 0.15rem;
+    display: block;
+}
+
+.main-three {
+    width: 100%;
+    height: 0.8rem;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: end;
+}
+
+.main-three>button {
+    width: calc(100% - 0.2rem);
+    height: 0.4rem;
+    background: linear-gradient(270deg, rgba(90, 144, 237, 1) 0%, rgba(76, 167, 248, 1) 100%);
+    border-radius: 20px;
+    display: block;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    bottom: 0.2rem;
+}

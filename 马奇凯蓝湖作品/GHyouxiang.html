@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>更换邮箱</title>
+    <link rel="stylesheet" href="./css/case.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <script src="./js/font-auto.js"></script>
+    <script src="./js/zepto.min.js"></script>
+</head>
+<body>
+    <div class="box">
+        <!-- 账号详情 -->
+        <div class="head head-details">
+            <i class="head-icon" onclick="history.go(-1)"></i>
+            <span class="head-word">更换邮箱</span>
+        </div>
+        <div class="main">
+            <!-- 灰块 -->
+            <div class="box-gray-block"></div>
+            <div class="main-modula">
+                <h5 class="main-modula-title">旧邮箱</h5>
+                <span class="huan-phone-number">1498274632@qq.com</span>
+                <!-- <div class="main-modula-word huan-phone-word">获取验证码</div> -->
+            </div>
+            <div class="main-modula">
+                <h5 class="main-modula-title">新邮箱</h5>
+                <!-- <span class="huan-phone-number gray">请输入验证码</span> -->
+                <input type="text" placeholder="请输入新邮箱" value="" class="huan-phone-number youxiang">
+            </div>
+
+            <div class="button-blue"><span class="button-word Save-replace">保存更换邮箱</span></div>
+        </div> 
+    </div>
+</body>
+<script>
+    $(function(){
+        if($('.youxiang').val() != ""){
+            $('.Save-replace').addClass('blue-word')
+        }else if($('.youxiang').val() == ""){
+            $('.Save-replace').removeClass('blue-word')
+        }
+        console.log($('.youxiang').val())  
+    })
+</script>
+</html>

@@ -1,0 +1,320 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    background-color: #F5F5F5;
+}
+.box {
+    width: 100%;
+    /* height: 100%; */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.head{
+    width: 100%;
+    height: 5rem;
+    background-color: #568FD6;
+    padding-top: 1.3rem;
+    box-sizing: border-box;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.head-search {
+    width: 32rem;
+    height: 2.9rem;
+    line-height: 2.9rem;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 1px 5px 0px rgba(7, 43, 105, 0.43);
+    border-radius: 1.4rem;
+    margin-left: 1.1rem;
+    font-size: 1.3rem;
+    font-family: PingFangSC;
+    font-weight: 400;
+    color: #ffffff;
+    padding-left: 3rem;
+    box-sizing: border-box;
+    position: relative;
+}
+.icon-search {
+    position: absolute;
+    left: 0.9rem;
+    top: 0.8rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    background: url('../img/要的搜索按钮@2x.png') no-repeat;
+    background-size: 100% 100%;
+}
+.head-jiahao{
+    position: absolute;
+    right: 1.5rem;
+    top: 1.2rem;
+    width: 1.8rem;
+    height: 1.8rem;
+}
+.head-word{
+    position: absolute;
+    right: 1.2rem;
+    top: 3.5rem;
+    font-size:0.8rem;
+    font-family:PingFangSC;
+    font-weight:400;
+    color:#FFFFFF;
+    line-height:1.1rem;
+}
+/* 中间 */
+.main {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    box-sizing: border-box;
+    
+}
+.main-modula{
+    width: 100%;
+    height: 11rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    background-color: #ffffff;
+    margin-top: 1rem;
+}
+.main-modula-top{
+    width: 100%;
+    height: 7rem;
+    /* display: -webkit-box;
+    -webkit-box-orient: horizontal; */
+    position: relative;
+}
+/* 左边图片 */
+.modula-top-img{
+    width: 4.5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    border-radius:50%;
+    font-size:2.7rem;
+    font-family:PingFangSC;
+    font-weight:400;
+    opacity: 0.49;
+    position: absolute;
+    top: 1.6rem;
+    left: 2.5rem;
+}
+.blue-image{
+    color: #346ECA;
+    background:rgba(215, 232, 252, 0.62);
+    text-shadow:0px 1px 4px rgba(52, 110, 202, 0.49);
+}
+.pink-image{
+    color: #D37F96;
+    background:rgba(246, 230, 231, 0.62);
+    text-shadow:0px 1px 4px rgba(211, 127, 150, 0.49);
+}
+.top-icon-blue{
+    width:1rem;
+    height:1rem;
+    background-color:#FFFFFF;
+    border-radius:50%;
+    position: absolute;
+    left: 0rem;
+    bottom: 0rem;
+    padding: 0.15rem;
+}
+.top-icon-blue>i{
+    display: block;
+    width:0.7rem;
+    height:0.7rem;
+    background:rgba(230, 241, 253, 0.48);
+    border:2px solid #7BACFB;
+    border-radius:50%;
+}
+.top-icon-pink{
+    width:1rem;
+    height:1rem;
+    background-color:#FFFFFF;
+    border-radius:50%;
+    position: absolute;
+    left: 0rem;
+    bottom: 0rem;
+    padding: 0.15rem;
+}
+.top-icon-pink>i{
+    display: block;
+    width:0.7rem;
+    height:0.7rem;
+    background:rgba(248, 238, 239, 0.48);
+    border:2px solid #E995AC;
+    border-radius:50%;
+}
+/* 作边案图片结束 */
+/* 中间 */
+.modula-center{
+    margin: 2rem 0 0 8.2rem;
+}
+.modula-center-title{
+    font-size:1.5rem;
+    font-family:PingFangSC;
+    font-weight:bold;
+    color:#494949;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+}
+.button-word {
+    display: none;
+    font-size: 0.9rem;
+    /* color: #FF4B4B; */
+    /* color: #68BE63; */
+    text-align: center;
+    width:5.8rem;
+    height:1.9rem;
+    line-height: 1.9rem;
+    border:0.1rem solid #ffffff;
+    /* border:0.1rem solid rgba(255, 75, 75, 1); */
+    /* border:0.1rem solid rgba(104, 190, 99, 1); */
+    border-radius:0.9rem;
+    box-sizing: border-box;
+    margin-left: 1.2rem;
+}
+.button-red{
+    display: block;
+    color: #FF4B4B;
+    border:0.1rem solid rgba(255, 75, 75, 1);
+}
+.button-green {
+    display: block;
+    color: #68BE63;
+    border:0.1rem solid rgba(104, 190, 99, 1);
+}
+.blue-qiangdan {
+    display: none;
+    width: 4.5rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    background: linear-gradient(87deg, rgba(90, 144, 237, 1) 0%, rgba(57, 157, 224, 1) 100%);
+    border-radius: 0.3rem;
+    font-size: 0.9rem;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0.2rem 0 0 0.5rem;
+}
+/* .blue-qiangdan-come{
+    display: block;
+} */
+.blue-qiangdan>img{
+    margin-right: 0.3rem;
+    vertical-align: middle;
+    margin-top: -0.1rem;
+}
+.modula-center-word{
+    color: #999999;
+    font-size:1rem;
+    font-family:PingFangSC;
+    font-weight:400;
+    margin-top: 0.4rem;
+}
+/* 中间结束 */
+/* 右边 */
+.modula-right{
+    width: 7.3rem;
+    height: 3.4rem;
+    position: absolute;
+    top: 0.8rem;
+    right: 0rem;
+    font-size:1rem;
+    font-family:PingFangSC;
+    font-weight:400;
+    color: #ffffff;
+    padding: 0.9rem 1.6rem 0 0rem;
+    box-sizing: border-box;
+    text-align: right;
+    /* background: red; */
+}
+.orange-img{
+    /* display: none; */
+    background: url('../img/橙色背景@2x.png') no-repeat;
+    background-size: 100% 100%;
+}
+.green-img{
+    /* display: none; */
+    background: url('../img/绿色按钮@2x.png') no-repeat;
+    background-size: 100% 100%;
+}
+.blue-img{
+    background: url('../img/蓝色背景@2x.png') no-repeat;
+    background-size: 100% 100%;
+}
+/* 职业与时间 */
+.main-modula-bottom{
+    /* width: 29.2rem; */
+    height: 4rem;
+    line-height: 4rem;
+    /* display: -webkit-box;
+    -webkit-box-orient: horizontal; */
+    margin-left: 8.2rem;
+    border-top: 1px solid #F5F5F5;
+    box-sizing: border-box;
+    position: relative;
+    font-size: 1rem;
+    color: #666666;
+}
+.bottom-time{
+    float: right;
+    margin-right: 6.5rem;
+}
+.bottom-delete{
+    display: none;
+    /* opacity: 0; */
+    width: 1rem;
+    height: 1rem;
+    background: url('../img/删除按钮@2x.png') no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 1.5rem;
+    right: 2.2rem;
+}
+
+
+
+/* 脚部 */
+.footer {
+    width: 100%;
+    height: 4.4rem;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: justify;
+    -webkit-box-flex: 1;
+    position: fixed;
+    z-index: 99;
+    bottom: 0rem;
+    left: 0rem;
+    background: #ffffff;
+}
+
+.personal-center {
+    width: 7.5rem;
+    height: 4.4rem;
+}
+
+.personal-center-img {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 2.7rem;
+    margin-top: 0.7rem;
+}
+
+.personal-center-word {
+    text-align: center;
+    display: block;
+    height: 0.9rem;
+    font-size: 0.9rem;
+    color: #7C7C7C;
+}
+
+.blue {
+    color: #5488E1;
+}

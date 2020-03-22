@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/register.css">
+    <link rel="stylesheet" href="./css/mobileSelect.css">
+</head>
+
+<body>
+    <div class="box">
+        <div class="header">
+            <img src="./images/返回按钮.png" alt="" onclick="location.href='index.html'">
+            <span class="font16 fb">注册</span>
+        </div>
+        <div class="main">
+            <div class="main-one mt10">
+                <div class="main-one-div">
+                    <label class="font16 fb">企业名称</label>
+                    <input class="bornone font14" type="text" id="trigger1" placeholder="凯莱德北京信用管理有限公司" readonly>
+                </div>
+                <div class="main-one-div">
+                    <label class="font16 fb">行业类型</label>
+                    <input class="bornone font14" type="text" id="trigger2" placeholder="请选择行业类型">
+                </div>
+                <div class="main-one-div">
+                    <label class="font16 fb">人员规模</label>
+                    <input class="bornone font14" type="text" id="trigger3" placeholder="请选择人员规模">
+                </div>
+                <div class="main-one-div2">
+                    <div>
+                        <label class="font16 fb">营业执照</label>
+                        <span class="font14 font-red ml20">*</span><span class="font14 font-ccc">需上传加盖公司红章的证件照片</span>
+                    </div>
+                    <div class="pic">
+                        <div><img src="./images/执照样板.png" alt=""></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="main-two mt10">
+                <div class="main-one-div">
+                    <label class="font16 fb">管理员姓名</label>
+                    <input class="name bornone font14" type="text" placeholder="请输入管理员姓名">
+                </div>
+                <div class="main-one-div">
+                    <label class="font16 fb">手机号</label>
+                    <input class="phone bornone font14" type="text" placeholder="请输入手机号">
+                </div>
+                <div class="main-one-div">
+                    <label class="font16 fb">验证码</label>
+                    <input class="ma bornone font14" type="text">
+                    <span class="getma font16 font-blue">获取验证码</span>
+                </div>
+            </div>
+            <div class="main-three mt20">
+                <div class="main-one-div">
+                    <label class="font16 fb">邀请码</label>
+                    <input class="yaoma name bornone font14" type="text" placeholder="请输入您的邀请码">
+                </div>
+            </div>
+            <div class="enroll mt35">
+                <span class="font16 fb font-white">注册</span>
+            </div>
+            <div class="word mt15">
+                <div>
+                    <span class="font12 font999">通过手机号可以确认是您本人操作，核实的所有信息将与此手机号码绑定，注册即表示你同意
+                        <u class="font12 font999">《凯莱德服务协议》</u></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./js/font-auto.js"></script>
+<script src="./js/jquery-min-3.4.1.js"></script>
+<script src="./js/mobileSelect.js"></script>
+<script src="./js/layui.js" charset="utf-8"></script>
+<script>
+    //下拉选择
+    var mobileSelect1 = new MobileSelect({
+        trigger: '#trigger2',
+        title: '地区选择',
+        wheels: [{
+            data: [{
+                id: '1',
+                value: '采矿业'
+            }, {
+                id: '2',
+                value: '建筑业'
+            }, {
+                id: '3',
+                value: '制造业'
+            }, {
+                id: '4',
+                value: '金融业'
+            }, {
+                id: '5',
+                value: '交通运输业'
+            }, {
+                id: '6',
+                value: '计算机服务和软件业'
+            }]
+        }],
+        transitionEnd: function(indexArr, data) {
+            console.log(data);
+        },
+        callback: function(indexArr, data) {
+            console.log(data);
+            $("#trigger2").val(data[0].value)
+        }
+    });
+
+    var mobileSelect1 = new MobileSelect({
+        trigger: '#trigger3',
+        title: '地区选择',
+        wheels: [{
+            data: [{
+                id: '1',
+                value: '1000以下'
+            }, {
+                id: '2',
+                value: '1000-2000'
+            }, {
+                id: '3',
+                value: '2000-3000'
+            }, {
+                id: '4',
+                value: '3000-5000'
+            }, {
+                id: '5',
+                value: '5000-10000'
+            }, {
+                id: '6',
+                value: '10000以上'
+            }]
+        }],
+        transitionEnd: function(indexArr, data) {
+            console.log(data);
+        },
+        callback: function(indexArr, data) {
+            console.log(data);
+            $("#trigger3").val(data[0].value)
+        }
+    });
+    $('.getma').click(function() {
+        var countdown = 60;
+
+        function settime() {
+            if (countdown == 0) {
+                $('.getma').text('获取验证码').css({
+                    'color': 'blue'
+                })
+                countdown = 60;
+                return;
+            } else {
+                $('.getma').text("重新发送(" + countdown + ")").css({
+                    'color': '#ccc'
+                })
+                countdown--;
+            }
+            setTimeout(function() {
+                settime()
+            }, 1000)
+        }
+        settime()
+    })
+    $('.enroll>span').mousedown(function() {
+        $('.enroll>span').css({
+            'background-color': 'blue'
+        })
+    })
+</script>

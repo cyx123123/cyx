@@ -1,0 +1,329 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    background-color: #F5F5F5;
+}
+.box {
+    width: 100%;
+    /* height: 100%; */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    background-color: #F5F5F5;
+}
+.head {
+    width: 100%;
+    height: 16.6rem;
+    background: url('../img/头部背景@2x.png') no-repeat;
+    background-size: 100% 100%;
+    /* position: relative; */
+    /* background:linear-gradient(-90deg, rgba(90, 144, 237, 1) 6%, rgba(76, 167, 248, 1) 100%); */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.head-top{
+    height: 3rem;
+    width: 100%;
+    /* display: flex; */
+    /* flex-direction: row; */
+    padding: 1rem 1.5rem 0 1.8rem;
+    box-sizing: border-box;
+}
+/* .head-come {
+    position: absolute;
+    top: 2.2rem;
+    left: 1.7rem;
+    display: inline-block;
+    width: 0.8rem;
+    height: 1.5rem;
+    background: url('../img/返回按钮@2x.png') no-repeat;
+} */
+.head-setup {
+    float: right;
+    width: 1.8rem;
+    height: 1.8rem;
+    background: url('../img/设置@2x.png') no-repeat;
+    background-size: 100% 100%;
+    margin-right: 0.8rem;
+}
+.head-news {
+    float: right;
+    position: relative;
+    width: 1.8rem;
+    height: 1.8rem;
+    background: url('../img/消息图图@2x.png') no-repeat;
+    background-size: 100% 100%;
+}
+.head-newred{
+    position: absolute;
+    top: -0.2rem;
+    right: 0rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px #F46262;
+    background-color: #F46262;
+}
+
+.head-personal {
+    width: 100%;
+    /* height: 11rem; */
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    background: linear-gradient(265deg, rgba(82, 144, 237, 1) 8%, rgba(76, 167, 248, 1) 100%);
+    /* margin-top: 1rem; */
+    color: #ffffff;
+}
+/* 左边图片 */
+.personal-left-img{
+    width: 5.4rem;
+    height: 5.4rem;
+    margin: 2.3rem 1.2rem 5.8rem 1.8rem;
+}
+/* 右边所有 */
+.head-personal-right {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.head-personal-icon{
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    margin-top: 0.2rem;
+}
+.personal-icongold {
+    width: 6.3rem;
+    height: 1.7rem;
+    line-height: 1.7rem;
+    background: url('../img/有笔规则@2x.png') no-repeat;
+    background-size: 100% 100%;
+    font-size:0.8rem;
+    font-family:PingFangSC;
+    font-weight:bold;
+    padding-left: 1.6rem;
+    box-sizing: border-box;
+    color:rgba(130, 104, 52, 1);
+}
+.personal-iconimg{
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-left: 1rem;
+}
+.head-personal-title {
+    font-size: 1.5rem;
+    font-family: PingFangSC;
+    font-weight: 500;
+    /* color: #494949; */
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    margin: 0.5rem 0 1.2rem 0;
+}
+
+.head-personal-word {
+    font-size:0.9rem;
+    font-family:PingFangSC;
+    font-weight:400;
+    color:rgba(255, 255, 255, 1);
+    padding: 0.2rem 0.5rem;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/* 信息 */
+
+.head-personal-infor {
+    width: 27.2rem;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+}
+
+.personal-infor-every {
+    /* width: 11rem; */
+    margin-right: 1rem;
+
+}
+
+.personal-infor-every-img {
+    margin: 0.9rem 0.2rem 0 0;
+}
+
+/* 中间 */
+.main {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    /* padding-top: 5rem;
+    padding-bottom: 5rem;
+    box-sizing: border-box; */
+}
+
+/* 邀请码 */
+.main-status{
+    width: 100%;
+    height: 4.2rem;
+    line-height: 4.2rem;
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0;
+    background-color: #ffffff;
+    color: #494949;
+    font-size:1.2rem;
+    font-family:PingFangSC;
+    font-weight:400;
+    position: relative;
+}
+.main-status-img{
+    width: 1.3rem;
+    height: 1.3rem;
+    margin: 1.5rem 0.8rem 0 1.8rem;
+}
+.main-status-ma{
+    width: 1.7rem;
+    height: 1.7rem;
+    margin: 1.2rem 0 0 12.8rem;
+}
+.main-right-icon {
+    width: 0.6rem;
+    height: 1.1rem;
+    position: absolute;
+    right: 2.8rem;
+    top: 1.5rem;
+    background: url('../img/下拉按钮@2x.png') no-repeat;
+    background-size: 100% 100%;
+}
+/* 下面表单 */
+.main-form{
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+.main-form-top{
+    width: 10rem;
+    height: 3.7rem;
+    line-height: 3.7rem;
+    color: #777777;
+    font-size:1.4rem;
+    font-family:PingFangSC;
+    font-weight:400;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+
+}
+.main-form-gray{
+    width:14px;
+    height:2px;
+    background:#E9E9E9;
+    margin: 1.7rem 0.3rem;
+}
+.main-form-image{
+    display: -webkit-box;
+    -webkit-box-orient: initial;
+    /* -webkit-box-flex: 1; */
+    -webkit-box-pack: justify;
+    padding: 0 1.4rem 0 1.3rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+.form-image-every{
+    width: 11rem;
+    height: 11rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    border: 0.1rem solid #E1E1E1;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.main-gray-block {
+    height: 1rem;
+    width: 100%;
+    background-color: #F5F5F5;
+}
+.form-image-word{
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #444444;
+    font-size:1.1rem;
+    font-family:PingFangSC;
+    font-weight:400;
+}
+.main-form-modula{
+    height: 4.2rem;
+    width: 100%;
+    line-height: 4.2rem;
+    /* display: flex;
+    flex-direction: row; */
+    background-color: #ffffff;
+    font-size:1.4rem;
+    font-family:PingFangSC;
+    font-weight:400;
+    color: #494949;
+    padding: 0 2.7rem 0 2.1rem;
+    box-sizing: border-box;
+    position: relative;
+}
+.form-modula-title{
+    display: inline-block;
+    line-height: 4.2rem;
+}
+/* .form-modula-word{
+    float: right;
+}
+.form-modula-word::after{
+    content: '';
+    clear: both;
+} */
+.main-gray{
+    height: 0.1rem;
+    width: 36.1rem;
+    background-color: #F5F5F5;
+    margin-left: 1.3rem;
+}
+
+
+
+/* 脚部 */
+.footer {
+    width: 100%;
+    height: 4.4rem;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: justify;
+    -webkit-box-flex: 1;
+    position: fixed;
+    z-index: 99;
+    bottom: 0rem;
+    left: 0rem;
+    background: #ffffff;
+}
+
+.personal-center {
+    width: 7.5rem;
+    height: 4.4rem;
+}
+
+.personal-center-img {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 2.7rem;
+    margin-top: 0.7rem;
+}
+
+.personal-center-word {
+    text-align: center;
+    display: block;
+    height: 0.9rem;
+    font-size: 0.9rem;
+    color: #7C7C7C;
+}
+
+.blue {
+    color: #5488E1;
+}

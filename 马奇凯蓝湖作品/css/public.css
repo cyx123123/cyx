@@ -1,0 +1,313 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    background-color: #F5F5F5;
+}
+.box {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    background-color: #F5F5F5;
+}
+.head {
+    width: 100%;
+    height: 5rem;
+    padding-top: 1.8rem;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    position: relative;
+    text-align: center;
+    margin-bottom: 0.1rem;
+}
+.head-icon {
+    position: absolute;
+    top: 2.2rem;
+    left: 1.7rem;
+    width: 0.8rem;
+    height: 1.5rem;
+    background: url('../img/返回按钮@2x.png') no-repeat;
+    background-size: 100% 100%;
+}
+.head-word {
+    font-size: 1.6rem;
+    font-family: PingFangSC;
+    font-weight: 500;
+    letter-spacing: 0rem;
+    color: #494949;
+}
+.button-right{
+    position: absolute;
+    font-size: 1.5rem;
+    color: #444444;
+    top: 2rem;
+    right: 1.5rem;
+}
+.main-modula {
+    height: 4.2rem;
+    width: 100%;
+    line-height: 4.2rem;
+    /* display: flex;
+    flex-direction: row; */
+    background-color: #ffffff;
+    font-size: 1.4rem;
+    font-family: PingFangSC;
+    font-weight: 400;
+    color: #494949;
+    padding: 0 2.7rem 0 2.1rem;
+    box-sizing: border-box;
+    margin-bottom: 0.1rem;
+    position: relative;
+}
+.main-modula-input{
+    color: #C7C7C7;
+    font-size:1.4rem;
+    font-family:PingFangSC;
+    font-weight:400;
+}
+.main-modula-title {
+    display: inline-block;
+    line-height: 4.2rem;
+}
+.main-modula-word {
+    float: right;
+}
+.mian-modula-word::after {
+    content: '';
+    clear: both;
+}
+/* 金豆规则介绍 */
+.box-gold{
+    background-color: #ffffff;
+}
+.main-gold-title {
+    height: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    font-size:1.8rem;
+    font-family:PingFangSC;
+    font-weight:400;
+    color:#333333;
+    background-color: #ffffff;
+}
+.main-gold{
+    height: 8rem;
+    margin-bottom: 1rem;
+}
+.main-gold-h5{
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    font-size:1.6rem;
+    font-family:PingFangSC;
+    font-weight:400;
+    color: #333333;
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    box-sizing: border-box;
+}
+.main-gold-h5-img{
+    display: block;
+    width: 1.7rem;
+    height: 1.7rem;
+    line-height: 1.7rem;
+    text-align: center;
+    font-size:1.3rem;
+    font-family:PingFangSC;
+    font-weight:400;
+    color: #ffffff;
+    background: url('../img/蓝色问号@2x.png') no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    top: 0.4rem;
+    margin-right: 0.2rem;
+}
+.main-gold-h5-icon{
+    position: relative;
+    /* top: 0.4rem; */
+    margin-right: 0.2rem;
+}
+.main-gold-word{
+    font-size:1.2rem;
+    font-family:PingFangSC;
+    font-weight:400;
+    color: #999999;
+    padding-left: 3.4rem;
+    box-sizing: border-box;
+    margin-bottom: 0.5rem;
+}
+/* 是否推荐再次雇佣 */
+.blue {
+    color: #5E94F6;
+}
+.main-blue:hover{
+    color: #5E94F6;
+}
+/* 账号详情 */
+.head-details{
+    margin-bottom: 1rem;
+}
+/* 注册人员规模 */
+.main-people{
+    font-size: 1.3rem;
+}
+/* 注册人员规模 */
+.main-modula-Checkmark{
+    display: none;
+    position: absolute;
+    top: 0rem;
+    right: 1rem;
+    color: #5E94F6;
+    font-size: 1.6rem;
+}
+.main-modula:hover .main-modula-Checkmark{
+    display: block;
+}
+/* 优币赠送 */
+.youbizengsong{
+    width: 8.2rem;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    text-align: center;
+    background: url('../img/优币赠送.png') no-repeat;
+    background-size: 100% 100%;
+    margin-top: 0.9rem;
+    color: #383B3E;
+    font-size:1.1rem;
+    font-family:PingFangSC;
+    font-weight:bold;
+}
+.button-blue{
+    margin: 3.8rem auto;
+    text-align: center;
+    font-size:1.6rem;
+    font-family:PingFangSC;
+    font-weight:400;
+    color: #ffffff;
+}
+.button-word{
+    /* background:linear-gradient(-90deg, rgba(90, 144, 237, 1) 19%, rgba(76, 167, 248, 1) 100%); */
+    padding: 1.5rem 13rem;
+    border-radius: 0.5rem;
+    background: #C9E2F7;
+}
+.blue-word{
+    background:linear-gradient(-90deg, rgba(90, 144, 237, 1) 19%, rgba(76, 167, 248, 1) 100%);
+}
+/* 灰块 */
+.box-gray-block{
+    height: 1rem;
+    background-color: #F5F5F5;
+    width: 100%;
+}
+/* 灰线 */
+.boxgray-line{
+    height: 0.1rem;
+    width: 36.2rem;
+    background-color: #F5F5F5;
+    margin-left: 1.3rem;
+}
+/* 换绑手机 */
+.button-huanphone{
+    padding: 1.5rem 9rem;
+
+}
+.huan-phone-word{
+    width: 8.5rem;
+    text-align: right;
+    height: 3rem;
+    font-size: 1.4rem;
+    line-height: 3rem;
+    margin-top: 0.6rem;
+    color: #5488E1;
+    background-color: #ffffff;
+    border-left: 0.1rem solid #DDDDDD;
+}
+.huan-phone-number{
+    margin-left: 0.5rem;
+}
+.gray{
+    color: #C7C7CC;
+}
+
+/* 管理员变更 */
+.light-gray{
+    color: #999999;
+}
+/* 更换邮箱 */
+.Save-replace{
+    padding: 1.5rem 11rem;
+    /* background: #C9E2F7; */
+}
+/* 消息列表 */
+/* .main-list{
+    padding-top: 1rem;
+    box-sizing: border-box;
+} */
+.main-list-all{
+    margin-bottom: 1rem;
+    width: 100%;
+    /* height: 10.4rem; */
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    background-color: #ffffff;
+    position: relative;
+}
+.main-list-all-icon{
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 2.9rem;
+    height: 1.1rem;
+    background: url('../img/NEW@2x.png') no-repeat;
+    background-size: 100% 100%;
+}
+.main-list-left{
+    width:5.4rem;
+    height:5.4rem;
+    background:rgba(255, 255, 255, 1);
+    border:0.1rem solid rgba(221, 221, 221, 1);
+    box-shadow:0px 0.3rem 0.6rem 0px rgba(0, 0, 0, 0.08);
+    border-radius:50%;
+    margin: 1.2rem 1.2rem 3.9rem 1.7rem;
+    position: relative;
+}
+.main-list-left-image{
+    position: absolute;
+    left: 0rem;
+    right: 0rem;
+    top: 0rem;
+    bottom: 0rem;
+    margin: auto;
+}
+.main-list-right{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.main-list-right-word{
+    width: 27rem;
+    font-size:1.4rem;
+    font-family:PingFangSC;
+    font-weight:400;
+    color: #494949;
+    line-height: 2.3rem;
+    margin: 1.5rem 0 1rem 0;
+}
+.main-list-right-date{
+    font-size:1.1rem;
+    font-family:PingFangSC;
+    font-weight:400;
+    color: #999999;
+}
+.list-right-rili{
+    margin-right: 0.5rem;
+}
+.list-right-time{
+    margin: 0 0.5rem 0 2rem;
+}
+
+
+
+
+
+

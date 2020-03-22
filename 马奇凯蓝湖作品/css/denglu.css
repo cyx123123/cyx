@@ -1,0 +1,112 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+.box {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.box-head {
+    width: 100%;
+    height: 6.2rem;
+    background-color: #568FD6;
+    padding-top: 3rem;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    position: relative;
+    text-align: center;
+    border-bottom: 1px solid #ADADAD;
+}
+.box-head-icon {
+    position: absolute;
+    top: 3.4rem;
+    left: 1.7rem;
+    width: 0.8rem;
+    height: 1.5rem;
+    background: url('../img/返回按钮@2x.png') no-repeat;
+    background-size: 100% 100%;
+}
+.box-head-word {
+    font-size: 1.6rem;
+    font-family: PingFangSC;
+    font-weight: 500;
+    color: rgba(73, 73, 73, 1);
+    letter-spacing: 0rem;
+}
+.box-main {
+    width: 100%;
+    /* height: 200rem; */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    padding-top: 0.8rem;
+    box-sizing: border-box;
+    /* background-color: #F5F5F5; */
+}
+.box-main-logo{
+    width: 8.1rem;
+    height: 8.1rem;
+    background: url('../img/logo@2x.png') no-repeat;
+    background-size: 100% 100%;
+    margin: 6rem auto;
+}
+input{
+    width: 100%;
+    height: 5.2rem;
+    outline: none;
+    padding-left: 1.8rem;
+    box-sizing: border-box;
+    border-bottom: 0.1rem solid #ffffff;
+}
+.submit{
+    width:33.9rem;
+    height:4rem;
+    line-height: 4rem;
+    /* background: #C9E2F7; */
+    /* background:linear-gradient(270deg, #5a90ed 0%, #4ca7f8 100%); */
+    border-radius:2rem;
+    margin: 6rem auto;
+    text-align: center;
+    font-size:1.5rem;
+    font-family:PingFangSC;
+    font-weight:400;
+    color: #ffffff;
+}
+/* .bb-blue {
+    border-bottom: 0.1rem solid #5a90ed;
+} */
+.bb-gray{
+    border:none;
+    border-bottom: 0.1rem solid #ECECEB;
+}
+.bb-red {
+    border:none;
+    border-bottom: 0.1rem solid red;
+}
+.gray{
+    background: #C9E2F7;
+}
+.blue{
+    background: #5a90ed!important;
+}
+.box-main-false{
+    margin-top: 1.5rem;
+    color: red;
+    padding-left: 1.8rem;
+    box-sizing: border-box;
+    opacity: 0;
+}
+.box-main-word{
+    font-size:1.2rem;
+    font-family:PingFangSC;
+    font-weight:400;
+    color:#3E73CCFF;
+    text-align: center;
+    margin-top: 18rem;
+}
+
+
+
+

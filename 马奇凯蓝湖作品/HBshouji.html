@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>换绑手机</title>
+    <link rel="stylesheet" href="./css/case.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <script src="./js/font-auto.js"></script>
+    <script src="./js/zepto.min.js"></script>
+</head>
+<body>
+    <div class="box">
+        <!-- 账号详情 -->
+        <div class="head head-details">
+            <i class="head-icon" onclick="history.go(-1)"></i>
+            <span class="head-word">换绑手机</span>
+        </div>
+        <div class="main">
+            <!-- 灰块 -->
+            <div class="box-gray-block"></div>
+            <div class="main-modula">
+                <h5 class="main-modula-title">手机号</h5>
+                <span class="huan-phone-number">15010398765</span>
+                <!-- <div class="main-modula-word huan-phone-word">获取验证码</div> -->
+                <input type="button" class="main-modula-word huan-phone-word" value="获取验证码">
+            </div>
+            <div class="main-modula">
+                <h5 class="main-modula-title">验证码</h5>
+                <!-- <span class="huan-phone-number gray">请输入验证码</span> -->
+                <input type="text" placeholder="请输入验证码" class="huan-phone-number yanzhengma" value="">
+            </div>
+
+            <div class="button-blue"><span class="button-word button-huanphone">验证后绑定新手机号</span></div>
+        </div> 
+    </div>
+</body>
+<script>
+    $(function(){
+        
+        // 手机验证码倒计时
+        var countdown = 60;
+        var module_number = $(".huan-phone-word");
+        $(".huan-phone-word").click(function(){
+            var disabled = $('.huan-phone-word').attr('disable')
+            if(disabled){
+                return false
+            }
+            settime();
+            function settime() {
+                if (countdown == 0) {
+                module_number.attr("disabled", false);
+                module_number.val("获取验证码");
+                $('.huan-phone-word').removeClass('gray');
+                countdown = 60;
+                return false;
+            } else {
+                $(".generate_code").attr("disabled", true);
+                module_number.val("重新发送(" + countdown + ")");
+                $('.huan-phone-word').addClass('gray');
+                countdown--;
+            }
+            setTimeout(function() {
+                settime();
+            }, 1000);
+            }  
+        })
+        if($('.yanzhengma').val() != ""){
+            $('.button-huanphone').addClass('blue-word')
+        }else if($('.yanzhengma').val() == ""){
+            $('.button-huanphone').removeClass('blue-word')
+        }
+        console.log($('.yanzhengma').val())  
+        
+    })
+</script>
+</html>
