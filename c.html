@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>c</title>
+</head>
+
+<body>
+    <div class="container"></div>
+    <div class="header">
+        <span>这是头部</span>
+    </div>
+    <div id="section">
+        <p>这是内容</p>
+        <strong>强调粗体</strong>
+        <b>普通粗体</b>
+    </div>
+    <p></p>
+    <input type="text" name="inputs" id="">
+    <div id="id">使你</div>
+</body>
+
+</html>
+<script>
+    // 通过类名获取
+    var $header = document.getElementsByClassName('header')
+    console.log($header)
+    // 通过ID名称获取
+    var $id=document.getElementById('section')
+    console.log($id)
+    //增删改查：
+    //增加节点
+    var $a=document.createElement('a')
+    $a.innerHTML='去淘宝'
+    $a.href='http://taobao.com'
+    $a.style.color='pink'
+    $a.style.fontSize='30px'
+    var $sec=document.querySelector('.header')
+    var $next=document.querySelector('span')
+    $sec.insertBefore($a,$next)
+    //删除节点
+    //找到父节点
+    var shanSection=document.querySelector('.section')
+    //找到要删除的节点
+    var remove = document.querySelector('.section>p')
+    shanSection.removeChild()
+</script>
